@@ -113,7 +113,7 @@ Bash
 
 npx cypress run
 
-## Autora
+## Autora 🐱💕👩‍💻
 Nayane Rocha
 [GitHub](https://github.com/nayanerocha)
 [Linkedin](https://www.linkedin.com/in/nayanerocha/)
