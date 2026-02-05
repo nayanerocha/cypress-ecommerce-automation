@@ -117,5 +117,6 @@ npx cypress run
 [GitHub](https://github.com/nayanerocha)
 [Linkedin](https://www.linkedin.com/in/nayanerocha/)
 
-📄 Licença
+# Licença: 📄
+
 Este projeto é de código aberto e foi criado para fins educacionais.
