@@ -1,7 +1,10 @@
 /// <reference types="cypress" />
 const { faker } = require('@faker-js/faker');
 
+
 describe('Funcionalidade Cadastro', () => {
+
+    const produto01 = 'Ariel Roll Sleeve Sweatshirt'
 
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
@@ -17,18 +20,18 @@ describe('Funcionalidade Cadastro', () => {
             //.first()
             //.last()
             //.eq(3)
-            .contains('Ariel Roll Sleeve Sweatshirt')
+            .contains(produto01)
             .click()
     });
 
     it('Deve adicionar um produto ao carrinho', () => {
 
         cy.get('[class="product-block grid"]')
-            .contains('Ariel Roll Sleeve Sweatshirt').click()
+            .contains(produto01).click()
         cy.get('[class="variable-item button-variable-item button-variable-item-S"]').click()
         cy.get('.button-variable-item-Purple').click()
         cy.get('.input-text').clear().type(6)
         cy.get('.single_add_to_cart_button').click()
-        cy.get('.woocommerce-message').should('contain', '“Ariel Roll Sleeve Sweatshirt” foram adicionados no seu carrinho.')
+        cy.get('.woocommerce-message').should('contain', `“${produto01}” foram adicionados no seu carrinho.`)
     });
 });
