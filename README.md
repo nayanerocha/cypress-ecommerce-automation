@@ -175,5 +175,3 @@ npx cypress run
 
 Este projeto é de código aberto e foi criado para fins educacionais.
 
-
-<!-- atualização forçada -->
