@@ -85,6 +85,56 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
   ![Carrinho Sucesso](cypress/img/carrinho_2.png)
   ![Carrinho Sucesso](cypress/img/carrinho_2_1.png)
 
+  ---
+
+### 🛒 Detalhes da Execução: CT04 - Expansão de Navegação e Múltiplos Itens
+
+**Objetivo:** Validar a persistência do carrinho ao navegar entre páginas distintas do catálogo (Página 9 e Página 5) e a adição de múltiplos produtos com variações de tamanho e cor.
+
+🔍 **Nota técnica:** Para otimizar a estabilidade do teste e contornar elementos de interface que sobrepunham a paginação, utilizei a estratégia de **navegação direta via URL** (`cy.visit()`). Além disso, apliquei **Lógica de Programação** através do uso de variáveis para armazenar os nomes dos produtos, tornando o código mais limpo, legível e de fácil manutenção.
+
+<details>
+  <summary>📸 Clique aqui para ver as evidências da Expansão</summary>
+
+  #### 1. Adição do Primeiro Produto (Página 9)
+  Navegação direta para a página 9 e seleção do produto "Selene Yoga Hoodie" com suas respectivas variações.
+  ![Produto Página 9](cypress/img/ct04-1.png)
+![Produto Página 9](cypress/img/ct04-2_p9.png)
+![Produto Página 9](cypress/img/ct04-3.png)
+
+  #### 2. Adição do Segundo Produto (Página 5)
+  Transição para a página 5 sem perda de sessão, adicionando o produto "Ingrid Running Jacket" ao carrinho já existente.
+  ![Produto Página 5](cypress/img/ct04-3.png)
+  ![Produto Página 9](cypress/img/ct04-4.png)
+  ![Produto Página 9](cypress/img/ct04-5.png)
+  ![Produto Página 9](cypress/img/ct04-sucesso-pagina-5.png)
+
+</details>
+
+---
+
+  ---
+
+## 📋 Estratégia de Testes
+
+Para garantir a qualidade da expansão do e-commerce, utilizei uma abordagem híbrida que combina o planejamento manual com a eficiência da automação.
+
+### 1. Testes Manuais (Cenários de Negócio)
+Antes de automatizar, realizei o levantamento de cenários críticos para validar as regras de negócio e a experiência do usuário (UX).
+* **CT-001:** Validação de persistência de múltiplos itens no carrinho.
+* **CT-002:** Bloqueio de compra sem seleção de atributos (Cor/Tamanho).
+* **CT-003:** Feedback visual em buscas por termos inexistentes.
+
+👉 **[Acesse aqui o Plano de Testes detalhado](./docs/Plano_de_Testes.md)**
+
+### 2. Automação de Testes (Cypress)
+Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a confiabilidade do sistema e evitar regressões.
+* **Destaques Técnicos:** * Navegação otimizada entre múltiplas páginas com `cy.visit()`.
+    * Uso de **Variáveis (Lógica de Programação)** para facilitar a manutenção dos nomes de produtos.
+    * Validação de integridade de dados no carrinho de compras.
+
+---
+
 </details>
 
 ## 🚀 Como executar o projeto
