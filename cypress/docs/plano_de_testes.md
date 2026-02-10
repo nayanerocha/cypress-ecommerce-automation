@@ -19,7 +19,7 @@ Este documento descreve os cenários de teste manuais planejados para validar as
     8. Acessar a página do carrinho.
 - **Resultado Esperado:** Ambos os produtos devem estar listados com as variações corretas e o subtotal deve refletir a soma dos dois itens.
 
-![Resultado](cypress/img/ct001-manual.png)
+![Resultado](cypress/img/ct001_manual.png)
 
 
 ---
@@ -32,8 +32,8 @@ Este documento descreve os cenários de teste manuais planejados para validar as
     2. Clicar diretamente no botão "Comprar" sem selecionar cor ou tamanho.
 - **Resultado Esperado:** O sistema deve exibir uma mensagem de alerta (ex: "Selecione as opções do produto") e o item não deve ser adicionado ao carrinho.
 
-![Resultado](cypress/img/ct002-manual-1.png)
-![Resultado](cypress/img/ct002-manual-2.png)
+![Resultado](cypress/img/ct002_manual_1.png)
+![Resultado](cypress/img/ct002_manual_2.png)
 
 
 
@@ -48,6 +48,6 @@ Este documento descreve os cenários de teste manuais planejados para validar as
     3. Pressionar Enter.
 - **Resultado Esperado:** O sistema deve exibir uma mensagem amigável informando que nenhum produto foi encontrado, em vez de uma página de erro ou tela em branco.
 
-![Resultado](cypress/img/ct003-manual-1.png)
-![Resultado](cypress/img/ct003-manual-2.png)
+![Resultado](cypress/img/ct003_manual_1.png)
+![Resultado](cypress/img/ct003_manual_2.png)
 

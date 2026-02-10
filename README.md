@@ -98,22 +98,20 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
   #### 1. Adição do Primeiro Produto (Página 9)
   Navegação direta para a página 9 e seleção do produto "Selene Yoga Hoodie" com suas respectivas variações.
-  ![Produto Página 9](cypress/img/ct04-1.png)
-![Produto Página 9](cypress/img/ct04-2_p9.png)
-![Produto Página 9](cypress/img/ct04-3.png)
+  ![Produto Página 9](cypress/img/ct04_1.png)
+![Produto Página 9](cypress/img/ct04_2.png)
+![Produto Página 9](cypress/img/ct04_3.png)
 
   #### 2. Adição do Segundo Produto (Página 5)
   Navegação direta para a página 9 e seleção do produto "Selene Yoga Hoodie" com suas respectivas variações.
-  ![Produto Página 5](cypress/img/ct04-3.png)
-  ![Produto Página 5](cypress/img/ct04-4.png)
-  ![Produto Página 5](cypress/img/ct04-5.png)
-  ![Produto Página 5](cypress/img/ct04-sucesso-pagina-5.png)
+  ![Produto Página 5](cypress/img/ct04_3.png)
+  ![Produto Página 5](cypress/img/ct04_4.png)
+  ![Produto Página 5](cypress/img/ct04_5.png)
+  ![Produto Página 5](cypress/img/ct04_sucesso_pagina_5.png)
 
 </details>
 
 ---
-
-  ---
 
 ## 📋 Estratégia de Testes
 
