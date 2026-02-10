@@ -103,11 +103,11 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 ![Produto Página 9](cypress/img/ct04-3.png)
 
   #### 2. Adição do Segundo Produto (Página 5)
-  Transição para a página 5 sem perda de sessão, adicionando o produto "Ingrid Running Jacket" ao carrinho já existente.
+  Navegação direta para a página 9 e seleção do produto "Selene Yoga Hoodie" com suas respectivas variações.
   ![Produto Página 5](cypress/img/ct04-3.png)
-  ![Produto Página 9](cypress/img/ct04-4.png)
-  ![Produto Página 9](cypress/img/ct04-5.png)
-  ![Produto Página 9](cypress/img/ct04-sucesso-pagina-5.png)
+  ![Produto Página 5](cypress/img/ct04-4.png)
+  ![Produto Página 5](cypress/img/ct04-5.png)
+  ![Produto Página 5](cypress/img/ct04-sucesso-pagina-5.png)
 
 </details>
 
