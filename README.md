@@ -168,3 +168,6 @@ npx cypress run
 ### Licença: 📄
 
 Este projeto é de código aberto e foi criado para fins educacionais.
+
+
+<!-- atualização forçada -->
