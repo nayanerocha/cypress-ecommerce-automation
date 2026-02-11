@@ -14,7 +14,7 @@ Este projeto foca na validação de fluxos críticos de negócio, garantindo que
 
 ---
 
-## 🧪 Plano de Testes e Execução
+## Plano de Testes e Execução
 
 Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
@@ -26,7 +26,7 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
 ---
 
-### 🔑 Detalhes da Execução: CT01 - Login com Sucesso
+### Detalhes da Execução: CT01 - Login com Sucesso
 
 **Objetivo:** Garantir que um usuário previamente cadastrado consiga acessar sua conta e ser redirecionado para o painel de controle ("Minha conta").
 
@@ -45,7 +45,7 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
 ---
 
-### 👤 Detalhes da Execução: CT02 - Pré-cadastro e Perfil
+### Detalhes da Execução: CT02 - Pré-cadastro e Perfil
 
 **Objetivo:** Validar a criação de uma nova conta utilizando dados dinâmicos e a complementação do perfil do usuário na área logada.
 
@@ -64,11 +64,11 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 ---
 ---
 
-### 🛒 Detalhes da Execução: CT03 - Adição ao Carrinho
+### Detalhes da Execução: CT03 - Adição ao Carrinho
 
 **Objetivo:** Validar o fluxo de seleção de produtos com variações (tamanho e cor), ajuste de quantidade e inserção no carrinho de compras.
 
-🔍 Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, este cenário foi automatizado utilizando classes específicas e seletores de atributo para garantir a precisão do clique.
+Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, este cenário foi automatizado utilizando classes específicas e seletores de atributo para garantir a precisão do clique.
 
 <details>
   <summary>📸 Clique aqui para ver as evidências de Compra</summary>
@@ -87,11 +87,11 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
   ---
 
-### 🛒 Detalhes da Execução: CT04 - Expansão de Navegação e Múltiplos Itens
+### Detalhes da Execução: CT04 - Expansão de Navegação e Múltiplos Itens
 
 **Objetivo:** Validar a persistência do carrinho ao navegar entre páginas distintas do catálogo (Página 9 e Página 5) e a adição de múltiplos produtos com variações de tamanho e cor.
 
-🔍 **Nota técnica:** Para otimizar a estabilidade do teste e contornar elementos de interface que sobrepunham a paginação, utilizei a estratégia de **navegação direta via URL** (`cy.visit()`). Além disso, apliquei **lógica de programação** através do uso de variáveis para armazenar os nomes dos produtos, tornando o código mais limpo, legível e de fácil manutenção.
+**Nota técnica:** Para otimizar a estabilidade do teste e contornar elementos de interface que sobrepunham a paginação, utilizei a estratégia de **navegação direta via URL** (`cy.visit()`). Além disso, apliquei **lógica de programação** através do uso de variáveis para armazenar os nomes dos produtos, tornando o código mais limpo, legível e de fácil manutenção.
 
 <details>
   <summary>📸 Clique aqui para ver as evidências da Expansão</summary>
@@ -115,7 +115,7 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
 ---
 
-## 📋 Estratégia de Testes
+## Estratégia de Testes
 
 Para garantir a qualidade da expansão do e-commerce, utilizei uma abordagem híbrida que combina o planejamento manual com a eficiência da automação.
 
@@ -126,7 +126,7 @@ Antes de automatizar, realizei o levantamento de cenários críticos para valida
 - **CT-002:** Bloqueio de compra sem seleção de atributos (Cor/Tamanho).  
 - **CT-003:** Feedback visual em buscas por termos inexistentes.
 
-👉 **[Acesse aqui o Plano de Testes detalhado](docs/plano_de_testes.md)**
+**[Acesse aqui o Plano de Testes detalhado](docs/plano_de_testes.md)**
 
 ### 2. Automação de Testes (Cypress)
 Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a confiabilidade do sistema e evitar regressões.
@@ -141,7 +141,7 @@ Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a
 
 </details>
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 Para rodar estes testes na sua máquina, siga os passos abaixo:
 1. Pré-requisitos
 
