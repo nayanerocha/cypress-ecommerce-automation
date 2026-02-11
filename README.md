@@ -39,11 +39,11 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
   Validação do redirecionamento para o painel de controle ("Minha conta") após inserção de credenciais válidas.
   ![Login Sucesso](cypress/img/login_sucesso.png)
 
-  ### 2.  Login com Sucesso (Data Driven)
+  #### 2.  Login com Sucesso (Data Driven)
   Uso de credenciais válidas extraídas do arquivo `perfil.json`.
   ![Login Sucesso](cypress/img/uso_fixture_e_mascara.png)
 
-  ### 3. Mascaramento de Senha (Segurança)
+  #### 3. Mascaramento de Senha (Segurança)
   Evidência do Cypress Runner ocultando o valor da senha durante o comando `.type()`.
   ![Login Runner](cypress/img/uso_fixture_e_mascara.png)
 
