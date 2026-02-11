@@ -7,7 +7,7 @@ describe('Funcionalidade Cadastro', () => {
     const produto01 = 'Ariel Roll Sleeve Sweatshirt'
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
+        cy.visit('produtos/')
     });
 
     afterEach(() => {

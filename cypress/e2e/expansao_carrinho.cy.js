@@ -13,7 +13,8 @@ describe('Compra de múltiplos produtos', () => {
         cy.screenshot()
     });
 
-    it('Deve adicionar um produto da página 9 ao carrinho', () => {
+    it('Deve adicionar múltiplos produtos ao carrinho mantendo a persistência', () => {
+
         cy.get(':nth-child(6) > .page-numbers').click()
         cy.get('.product-block').contains(produto01).click()
 
@@ -21,9 +22,8 @@ describe('Compra de múltiplos produtos', () => {
         cy.get('.button-variable-item-Purple').click()
         cy.get('.input-text').clear().type(3)
         cy.get('.single_add_to_cart_button').click()
-    });
+    
 
-    it('Deve adicionar um produto da página 5 ao carrinho', () => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/page/5/')
         cy.get('.product-block').contains(produto02).click()
 
@@ -31,5 +31,12 @@ describe('Compra de múltiplos produtos', () => {
         cy.get('.button-variable-item-White').click()
         cy.get('.input-text').clear().type(4)
         cy.get('.single_add_to_cart_button').click()
+
+        cy.get('.woocommerce-message').should('contain', produto02)
+
+        cy.get('#cart > .dropdown-toggle').click()
+
+        cy.get('#cart > .dropdown-menu > .widget_shopping_cart_content').should('contain', produto01)
+        cy.get('#cart > .dropdown-menu > .widget_shopping_cart_content').should('contain', produto02)
 });
 });

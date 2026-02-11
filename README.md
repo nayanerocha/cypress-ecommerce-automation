@@ -26,24 +26,41 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
 ---
 
-### Detalhes da Execução: CT01 - Login com Sucesso
+### 🛒 Detalhes da Execução: CT01 - Funcionalidade de Login
 
-**Objetivo:** Garantir que um usuário previamente cadastrado consiga acessar sua conta e ser redirecionado para o painel de controle ("Minha conta").
+**Objetivo:** Validar o acesso à plataforma, garantindo que usuários cadastrados acessem suas contas com sucesso e que tentativas com dados inválidos sejam bloqueadas com mensagens de erro apropriadas.
+
+**Nota técnica:** Implementei o uso de arquivos de dados (**Fixtures**) para separar a massa de teste do código principal. Para garantir a privacidade em demonstrações, utilizei o parâmetro `{ log: false }` no campo de senha, impedindo a exibição do dado sensível no log de execução do Cypress.
 
 <details>
   <summary>📸 Clique aqui para ver as evidências de Login</summary>
 
-  #### 1. Logs de execução (Cypress Runner)
-  Este print demonstra o passo a passo dos comandos executados pelo robô e a asserção (assertion) de sucesso confirmando o login.
+  #### 1. Login com Sucesso
+  Validação do redirecionamento para o painel de controle ("Minha conta") após inserção de credenciais válidas.
+  ![Login Sucesso](cypress/img/login_sucesso.png)
+
+  ### 2.  Login com Sucesso (Data Driven)
+  Uso de credenciais válidas extraídas do arquivo `perfil.json`.
+  ![Login Sucesso](cypress/img/uso_fixture_e_mascara.png)
+
+  ### 3. Mascaramento de Senha (Segurança)
+  Evidência do Cypress Runner ocultando o valor da senha durante o comando `.type()`.
+  ![Login Runner](cypress/img/uso_fixture_e_mascara.png)
+
+  #### 4. Tratamento de Usuário Inválido
+  Verificação da mensagem de erro e do bloqueio de acesso ao inserir um e-mail não cadastrado no sistema.
+  ![Login Inválido](cypress/img/login_invalido.png)
+
+  #### 4. Logs de Execução (Cypress Runner)
+  Passo a passo dos comandos e asserções (assertions) executados pelo Cypress, garantindo a integridade do fluxo de autenticação.
   ![Login Runner](cypress/img/login_runner_1.png)
 
-  #### 2. Interface da página logada
-  Visualização da página de destino após a autenticação bem-sucedida, capturada automaticamente via screenshot.
-  ![Login Sucesso](cypress/img/login_sucesso.png)
+
+
 </details>
 
-
 ---
+
 
 ### Detalhes da Execução: CT02 - Pré-cadastro e Perfil
 
@@ -61,7 +78,7 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
   Visualização da mensagem de sucesso: *"Detalhes da conta modificados com sucesso"*, validando o fim do fluxo.
   ![Cadastro Sucesso](cypress/img/cadastro_sucesso.png)
 </details>
----
+
 ---
 
 ### Detalhes da Execução: CT03 - Adição ao Carrinho
@@ -87,7 +104,7 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
 
   ---
 
-### Detalhes da Execução: CT04 - Expansão de Navegação e Múltiplos Itens
+### Detalhes da Execução: CT04 - Testes de Navegação e Múltiplos Itens
 
 **Objetivo:** Validar a persistência do carrinho ao navegar entre páginas distintas do catálogo (Página 9 e Página 5) e a adição de múltiplos produtos com variações de tamanho e cor.
 
@@ -104,7 +121,7 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
   ![Produto Página 9](cypress/img/ct04.3.png)
 
   #### 2. Adição do Segundo Produto (Página 5)
-  Navegação direta para a página 5 e seleção do produto **"Selene Yoga Hoodie"** com suas respectivas variações.
+  Navegação direta para a página 5 e seleção do produto **"Selene Yoga Hoodie"** com suas respectivas variações. Transição para a página 5 e adição de novo item. Validação final confirmando que o sistema manteve o primeiro produto, atualizando corretamente o subtotal.
 
   ![Produto Página 5](cypress/img/ct04.3.png)  
   ![Produto Página 5](cypress/img/ct04.4.png)  
@@ -114,6 +131,7 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
 </details>
 
 ---
+
 ## Estratégia de Testes
 
 Para garantir a qualidade da expansão do e-commerce, utilizei uma abordagem híbrida que combina o planejamento manual com a eficiência da automação.
@@ -131,10 +149,10 @@ Antes de automatizar, realizei o levantamento de cenários críticos para valida
 Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a confiabilidade do sistema e evitar regressões.
 
 **Destaques Técnicos:**
-- Navegação otimizada entre múltiplas páginas com `cy.visit()`.  
-- Uso de **variáveis (lógica de programação)** para facilitar a manutenção dos nomes de produtos.  
-- Validação de integridade de dados no carrinho de compras.
-
+- **Navegação Otimizada:** Uso de `cy.visit()` dinâmico.
+- **Data Driven Testing:** Uso de **Fixtures** para isolar massa de dados.
+- **Segurança:** Mascaramento de logs em campos sensíveis.
+- **Manutenibilidade:** Uso de variáveis para evitar *hardcoded strings*.
 ---
 
 </details>
