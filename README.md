@@ -114,7 +114,6 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
 </details>
 
 ---
-
 ## Estratégia de Testes
 
 Para garantir a qualidade da expansão do e-commerce, utilizei uma abordagem híbrida que combina o planejamento manual com a eficiência da automação.
@@ -126,7 +125,7 @@ Antes de automatizar, realizei o levantamento de cenários críticos para valida
 - **CT-002:** Bloqueio de compra sem seleção de atributos (Cor/Tamanho).  
 - **CT-003:** Feedback visual em buscas por termos inexistentes.
 
-**[Acesse aqui o Plano de Testes detalhado](docs/plano_de_testes.md)**
+![Acesse aqui o Plano de Testes detalhado](docs/plano_de_testes.md)
 
 ### 2. Automação de Testes (Cypress)
 Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a confiabilidade do sistema e evitar regressões.
@@ -137,7 +136,6 @@ Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a
 - Validação de integridade de dados no carrinho de compras.
 
 ---
-
 
 </details>
 
