@@ -128,7 +128,7 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
   ![Produto Página 5](cypress/img/ct04.3.png)  
   ![Produto Página 5](cypress/img/ct04.4.png)  
   ![Produto Página 5](cypress/img/ct04.5.png)  
-  ![Produto Página 5](cypress/img/ct04.5.1.png)
+  ![Produto Página 5](cypress\img\persistencia_carrinho.png)
 
 </details>
 
