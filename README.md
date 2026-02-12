@@ -102,7 +102,9 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
   ![Carrinho Sucesso](cypress/img/carrinho_2.png)
   ![Carrinho Sucesso](cypress/img/carrinho_2_1.png)
 
-  ---
+</details>
+
+---
 
 ### Detalhes da Execução: CT04 - Testes de Navegação e Múltiplos Itens
 
@@ -153,9 +155,8 @@ Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a
 - **Data Driven Testing:** Uso de **Fixtures** para isolar massa de dados.
 - **Segurança:** Mascaramento de logs em campos sensíveis.
 - **Manutenibilidade:** Uso de variáveis para evitar *hardcoded strings*.
----
 
-</details>
+---
 
 ## Como executar o projeto
 Para rodar estes testes na sua máquina, siga os passos abaixo:
