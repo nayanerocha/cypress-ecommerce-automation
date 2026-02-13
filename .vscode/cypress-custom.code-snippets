@@ -1,0 +1,219 @@
+{
+  "Cypress Test File Template": {
+    "prefix": "cyfile",
+    "body": [
+      "/// <reference types=\"cypress\" />",
+      "",
+      "describe('${1:Funcionalidade}', () => {",
+      "",
+      "    beforeEach(() => {",
+      "        cy.visit('${2:url}')",
+      "    });",
+      "",
+      "    it('${3:Deve}', () => {",
+      "        $0",
+      "    });",
+      "});"
+    ],
+    "description": "Template completo de arquivo de teste Cypress"
+  },
+
+  "Describe Block": {
+    "prefix": "desc",
+    "body": [
+      "describe('${1:Funcionalidade}', () => {",
+      "    $0",
+      "});"
+    ],
+    "description": "Bloco describe"
+  },
+
+  "It Test": {
+    "prefix": "it",
+    "body": [
+      "it('${1:Deve}', () => {",
+      "    $0",
+      "});"
+    ],
+    "description": "Bloco it para teste"
+  },
+
+  "It Only": {
+    "prefix": "ito",
+    "body": [
+      "it.only('${1:Deve}', () => {",
+      "    $0",
+      "});"
+    ],
+    "description": "Bloco it.only para rodar apenas este teste"
+  },
+
+  "Before Each": {
+    "prefix": "bef",
+    "body": [
+      "beforeEach(() => {",
+      "    cy.visit('${1:url}')",
+      "});"
+    ],
+    "description": "Hook beforeEach com cy.visit"
+  },
+
+  "After Each": {
+    "prefix": "aft",
+    "body": [
+      "afterEach(() => {",
+      "    cy.screenshot()",
+      "});"
+    ],
+    "description": "Hook afterEach com screenshot"
+  },
+
+  "Cypress Get": {
+    "prefix": "cyg",
+    "body": [
+      "cy.get('${1:selector}')$0"
+    ],
+    "description": "cy.get()"
+  },
+
+  "Cypress Get Type": {
+    "prefix": "cygt",
+    "body": [
+      "cy.get('${1:selector}').type(${2:value})"
+    ],
+    "description": "cy.get().type()"
+  },
+
+  "Cypress Get Click": {
+    "prefix": "cygc",
+    "body": [
+      "cy.get('${1:selector}').click()"
+    ],
+    "description": "cy.get().click()"
+  },
+
+  "Cypress Get Should Contain": {
+    "prefix": "cygsc",
+    "body": [
+      "cy.get('${1:selector}').should('contain', '${2:text}')"
+    ],
+    "description": "cy.get().should('contain')"
+  },
+
+  "Cypress Get Should Be Enabled": {
+    "prefix": "cygse",
+    "body": [
+      "cy.get('${1:selector}').should('be.enabled').type(${2:value})"
+    ],
+    "description": "cy.get().should('be.enabled').type()"
+  },
+
+  "Cypress Visit": {
+    "prefix": "cyv",
+    "body": [
+      "cy.visit('${1:url}')"
+    ],
+    "description": "cy.visit()"
+  },
+
+  "Cypress Fixture": {
+    "prefix": "cyfix",
+    "body": [
+      "cy.fixture('${1:perfil}').then(dados => {",
+      "    $0",
+      "})"
+    ],
+    "description": "cy.fixture() com then"
+  },
+
+  "Faker Import": {
+    "prefix": "fakerimp",
+    "body": [
+      "const { faker } = require('@faker-js/faker');"
+    ],
+    "description": "Import do Faker.js"
+  },
+
+  "Faker Person Name": {
+    "prefix": "fakename",
+    "body": [
+      "let ${1:nome}Faker = faker.person.firstName()",
+      "let ${2:sobrenome}Faker = faker.person.lastName()"
+    ],
+    "description": "Gera nome e sobrenome com Faker"
+  },
+
+  "Faker Email": {
+    "prefix": "fakeemail",
+    "body": [
+      "let ${1:email}Faker = faker.internet.email(${2:nomeFaker})"
+    ],
+    "description": "Gera email com Faker"
+  },
+
+  "Faker Complete User": {
+    "prefix": "fakeuser",
+    "body": [
+      "let nomeFaker = faker.person.firstName()",
+      "let sobrenomeFaker = faker.person.lastName()",
+      "let emailFaker = faker.internet.email(nomeFaker)"
+    ],
+    "description": "Gera usuário completo com Faker"
+  },
+
+  "Custom Command": {
+    "prefix": "cycom",
+    "body": [
+      "Cypress.Commands.add('${1:commandName}', (${2:params}) => {",
+      "    $0",
+      "})"
+    ],
+    "description": "Criar comando customizado do Cypress"
+  },
+
+  "Woocommerce Message Assertion": {
+    "prefix": "woomsg",
+    "body": [
+      "cy.get('.woocommerce-message').should('contain', '${1:mensagem}')"
+    ],
+    "description": "Validação de mensagem do Woocommerce"
+  },
+
+  "Arrow Function": {
+    "prefix": "=>",
+    "body": [
+      "=> {",
+      "    $0",
+      "}"
+    ],
+    "description": "Arrow function com bloco"
+  },
+
+  "Arrow Function Inline": {
+    "prefix": "=>i",
+    "body": [
+      "=> $0"
+    ],
+    "description": "Arrow function inline"
+  },
+
+  "Then Arrow Function": {
+    "prefix": ".then",
+    "body": [
+      ".then(${1:dados} => {",
+      "    $0",
+      "})"
+    ],
+    "description": "Then com arrow function"
+  },
+
+  "Callback Arrow Function": {
+    "prefix": "() =>",
+    "body": [
+      "() => {",
+      "    $0",
+      "}"
+    ],
+    "description": "Callback arrow function completo"
+  }
+}

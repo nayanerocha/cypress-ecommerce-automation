@@ -1,0 +1,24 @@
+{
+    "kiroAgent.configureMCP": "Disabled",
+    
+    // Melhorias para autocompletar JavaScript/Cypress
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    
+    // Autocompletar parênteses e chaves
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "javascript.suggest.completeFunctionCalls": true,
+    
+    // IntelliSense melhorado
+    "javascript.suggest.autoImports": true,
+    "javascript.updateImportsOnFileMove.enabled": "always"
+}

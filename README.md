@@ -55,7 +55,8 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
   Passo a passo dos comandos e asserções (assertions) executados pelo Cypress, garantindo a integridade do fluxo de autenticação.
   ![Login Runner](cypress/img/login_runner_1.png)
 
-
+#### 5. Otimização com Comandos Customizados
+Implementação do comando `cy.login(usuario, senha)` no arquivo `commands.js`. Esta abstração permite a reutilização do fluxo de autenticação em diferentes suítes de teste, reduzindo a duplicidade de código.
 
 </details>
 
@@ -77,11 +78,21 @@ Abaixo estão os cenários de teste mapeados e o status atual da automação:
   #### 2. Confirmação de Alteração
   Visualização da mensagem de sucesso: *"Detalhes da conta modificados com sucesso"*, validando o fim do fluxo.
   ![Cadastro Sucesso](cypress/img/cadastro_sucesso.png)
+
+#### 3. Uso de Comandos Customizados
+Implementação do comando `cy.preCadastro()`, que automatiza desde o registro inicial até a edição dos detalhes da conta. 
+
+#### 4. Estabilidade e Validações de Interface
+O uso de comandos customizados incluiu asserções avançadas como `.should('be.enabled')` para garantir que os campos de Nome e Sobrenome estejam prontos para interação, além de esperas dinâmicas com `timeout` para lidar com a latência do servidor.
+
+#### 5. Evolução da Massa Dinâmica (Faker.js)
+Atualização dos scripts para utilizar a versão mais recente da biblioteca (`faker.person.firstName()`), garantindo que a geração de dados permaneça compatível com as melhores práticas de desenvolvimento.
+
 </details>
 
 ---
 
-### Detalhes da Execução: CT03 - Adição ao Carrinho
+### Detalhes da Execução: CT03 - Produtos (Adição ao carrinho)
 
 **Objetivo:** Validar o fluxo de seleção de produtos com variações (tamanho e cor), ajuste de quantidade e inserção no carrinho de compras.
 
@@ -101,6 +112,28 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
   ![Carrinho Sucesso](cypress/img/adicionado_carrinho_sucesso.png)
   ![Carrinho Sucesso](cypress/img/carrinho_2.png)
   ![Carrinho Sucesso](cypress/img/carrinho_2_1.png)
+
+  ## ⚠️ Decisão Técnica: Comandos Customizados no Teste de Produtos
+
+### Contexto
+Durante a implementação do comando customizado `addProdutos()`, foram identificadas inconsistências significativas na estrutura HTML do site de testes.
+
+### Problema Técnico
+O site possui uma implementação inconsistente dos seletores de tamanho e cor:
+* **Tamanho:** Requer seletor de atributo completo `[class="variable-item button-variable-item button-variable-item-S"]`.
+* **Cor:** Funciona com seletor de classe simples `.button-variable-item-Purple`.
+
+Esta inconsistência torna o comando customizado excessivamente complexo e frágil, exigindo lógica condicional ou múltiplas estratégias de seleção para lidar com diferentes tipos de atributos.
+
+### Decisão e Justificativa
+Optou-se por **não aplicar comandos customizados** neste cenário específico. 
+
+**Justificativa:**
+1. **Objetivo de Aprendizado Atingido:** O conceito de Custom Commands foi compreendido e aplicado com sucesso em outros fluxos (Login e Cadastro).
+2. **Manutenibilidade:** A manutenção de seletores diretos neste caso garante maior legibilidade. 
+3. **Custo-benefício:** O tempo necessário para contornar as falhas estruturais do site de testes não justifica o ganho educacional, sendo mais estratégico focar na evolução para os próximos módulos. 
+</details>
+
 
 </details>
 
@@ -129,8 +162,6 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
   ![Produto Página 5](cypress/img/ct04.4.png)  
   ![Produto Página 5](cypress/img/ct04.5.png)  
   ![Ambos produtos no carrinho](cypress/img/persistencia_carrinho.png)
-
-</details>
 
 ---
 
