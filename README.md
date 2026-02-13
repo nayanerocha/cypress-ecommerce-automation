@@ -79,6 +79,8 @@ Implementação do comando `cy.login(usuario, senha)` no arquivo `commands.js`. 
   Visualização da mensagem de sucesso: *"Detalhes da conta modificados com sucesso"*, validando o fim do fluxo.
   ![Cadastro Sucesso](cypress/img/cadastro_sucesso.png)
 
+</details>
+
 #### 3. Uso de Comandos Customizados
 Implementação do comando `cy.preCadastro()`, que automatiza desde o registro inicial até a edição dos detalhes da conta. 
 
@@ -87,8 +89,6 @@ O uso de comandos customizados incluiu asserções avançadas como `.should('be.
 
 #### 5. Evolução da Massa Dinâmica (Faker.js)
 Atualização dos scripts para utilizar a versão mais recente da biblioteca (`faker.person.firstName()`), garantindo que a geração de dados permaneça compatível com as melhores práticas de desenvolvimento.
-
-</details>
 
 ---
 
@@ -113,7 +113,11 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
   ![Carrinho Sucesso](cypress/img/carrinho_2.png)
   ![Carrinho Sucesso](cypress/img/carrinho_2_1.png)
 
-  ## ⚠️ Decisão Técnica: Comandos Customizados no Teste de Produtos
+</details>
+
+---
+
+## ⚠️ Decisão Técnica: Comandos Customizados no Teste de Produtos
 
 ### Contexto
 Durante a implementação do comando customizado `addProdutos()`, foram identificadas inconsistências significativas na estrutura HTML do site de testes.
@@ -131,9 +135,7 @@ Optou-se por **não aplicar comandos customizados** neste cenário específico.
 **Justificativa:**
 1. **Objetivo de Aprendizado Atingido:** O conceito de Custom Commands foi compreendido e aplicado com sucesso em outros fluxos (Login e Cadastro).
 2. **Manutenibilidade:** A manutenção de seletores diretos neste caso garante maior legibilidade. 
-3. **Custo-benefício:** O tempo necessário para contornar as falhas estruturais do site de testes não justifica o ganho educacional, sendo mais estratégico focar na evolução para os próximos módulos. 
-
-</details>
+3. **Custo-benefício:** O tempo necessário para contornar as falhas estruturais do site de testes não justifica o ganho educacional, sendo mais estratégico focar na evolução para os próximos módulos.
 
 ---
 
