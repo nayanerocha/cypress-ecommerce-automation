@@ -5,7 +5,7 @@ Projeto desenvolvido como parte da formação em Engenharia de Qualidade de Soft
 
 Este projeto foca na validação de fluxos críticos de negócio, garantindo que funcionalidades essenciais como autenticação, cadastro e o processo de compra operem conforme os requisitos, minimizando riscos de regressão e falhas na experiência do usuário.
 
-## 🛠️ Tecnologias Utilizadas
+### 🛠️ Tecnologias Utilizadas
 
 * **Cypress**: Framework principal para automação de testes E2E.
 * **JavaScript**: Linguagem base para o desenvolvimento dos scripts.
@@ -14,7 +14,7 @@ Este projeto foca na validação de fluxos críticos de negócio, garantindo que
 
 ---
 
-## Plano de Testes e Execução
+### Plano de Testes e Execução
 
 Abaixo estão os cenários de teste mapeados e o status atual da automação:
 
@@ -117,19 +117,19 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
 
 ---
 
-## ⚠️ Decisão Técnica: Comandos Customizados no Teste de Produtos
+### Decisão Técnica: Comandos Customizados no Teste de Produtos
 
-### Contexto
+#### Contexto
 Durante a implementação do comando customizado `addProdutos()`, foram identificadas inconsistências significativas na estrutura HTML do site de testes.
 
-### Problema Técnico
+#### Problema Técnico
 O site possui uma implementação inconsistente dos seletores de tamanho e cor:
 * **Tamanho:** Requer seletor de atributo completo `[class="variable-item button-variable-item button-variable-item-S"]`.
 * **Cor:** Funciona com seletor de classe simples `.button-variable-item-Purple`.
 
 Esta inconsistência torna o comando customizado excessivamente complexo e frágil, exigindo lógica condicional ou múltiplas estratégias de seleção para lidar com diferentes tipos de atributos.
 
-### Decisão e Justificativa
+#### Decisão e Justificativa
 Optou-se por **não aplicar comandos customizados** neste cenário específico. 
 
 **Justificativa:**
@@ -139,7 +139,7 @@ Optou-se por **não aplicar comandos customizados** neste cenário específico.
 
 ---
 
-### Detalhes da Execução: CT04 - Testes de Navegação e Múltiplos Itens
+#### Detalhes da Execução: CT04 - Testes de Navegação e Múltiplos Itens
 
 **Objetivo:** Validar a persistência do carrinho ao navegar entre páginas distintas do catálogo (Página 9 e Página 5) e a adição de múltiplos produtos com variações de tamanho e cor.
 
@@ -167,7 +167,7 @@ Optou-se por **não aplicar comandos customizados** neste cenário específico.
 
 ---
 
-## Estratégia de Testes
+### Estratégia de Testes
 
 Para garantir a qualidade da expansão do e-commerce, utilizei uma abordagem híbrida que combina o planejamento manual com a eficiência da automação.
 
@@ -191,7 +191,7 @@ Os cenários de fluxo de ponta a ponta (E2E) foram automatizados para garantir a
 
 ---
 
-## Como executar o projeto
+### Como executar o projeto
 Para rodar estes testes na sua máquina, siga os passos abaixo:
 1. Pré-requisitos
 
@@ -217,7 +217,7 @@ Bash
 
 npx cypress run
 
-## Autora: Nayane Rocha🐱💕👩‍💻
+### Autora: Nayane Rocha🐱💕👩‍💻
 [GitHub](https://github.com/nayanerocha)
 [Linkedin](https://www.linkedin.com/in/nayanerocha/)
 
