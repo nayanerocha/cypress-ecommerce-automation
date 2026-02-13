@@ -132,8 +132,6 @@ Optou-se por **não aplicar comandos customizados** neste cenário específico.
 1. **Objetivo de Aprendizado Atingido:** O conceito de Custom Commands foi compreendido e aplicado com sucesso em outros fluxos (Login e Cadastro).
 2. **Manutenibilidade:** A manutenção de seletores diretos neste caso garante maior legibilidade. 
 3. **Custo-benefício:** O tempo necessário para contornar as falhas estruturais do site de testes não justifica o ganho educacional, sendo mais estratégico focar na evolução para os próximos módulos. 
-</details>
-
 
 </details>
 
@@ -162,6 +160,8 @@ Optou-se por **não aplicar comandos customizados** neste cenário específico.
   ![Produto Página 5](cypress/img/ct04.4.png)  
   ![Produto Página 5](cypress/img/ct04.5.png)  
   ![Ambos produtos no carrinho](cypress/img/persistencia_carrinho.png)
+
+</details>
 
 ---
 
