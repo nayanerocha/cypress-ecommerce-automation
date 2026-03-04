@@ -1,0 +1,45 @@
+[
+ {"nome": "Ana",
+ "sobrenome":"Pinheiro",
+ "empresa":"EBAC",
+ "pais": "Brasil",
+ "endereco":"Avenidade das Flores",
+ "numero":"215",
+ "cidade":"Curitiba",
+ "estado":"Paraná",
+ "cep":"17240-009",
+ "telefone":"41882547196",
+ "email":"anateste@email.com"
+},
+{"nome": "Joel",
+ "sobrenome":"Miller",
+ "empresa":"Madereira Miller",
+ "pais": "Brasil",
+ "endereco":"Avenidade 7 de Setembro",
+ "numero":"1881",
+ "cidade":"São Paulo",
+ "estado":"São Paulo",
+ "cep":"01012-000",
+ "telefone":"118219877",
+ "email":"joelmiller@email.com"
+
+},
+{"nome": "Esteban",
+ "sobrenome":"Kukurizka",
+ "empresa":"Teatro Colón",
+ "pais": "Argentina",
+ "endereco":"Rua Cerrito",
+ "numero":"628",
+ "cidade":"Buenos Aires",
+ "estado":"Buenos Aires",
+ "cep":"C1010AAN",
+ "telefone":"541143787100",
+ "email":"teatrocolon@email.com"
+
+}
+
+
+
+
+
+]

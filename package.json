@@ -4,7 +4,10 @@
   "description": "Automação de testes de ponta a ponta (E2E) em plataforma de e-commerce utilizando Cypress e Faker.js. Projeto desenvolvido como parte da formação em Engenharia de Qualidade de Software da EBAC.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "npx cypress run",
+    "cy:open": "npx cypress open",
+    "cy:report": "npx cypress run --record --key 2f90f6ac-908f-476b-b3c6-39ada1d84d10"
   },
   "repository": {
     "type": "git",

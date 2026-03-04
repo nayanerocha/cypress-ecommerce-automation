@@ -115,9 +115,9 @@ Nota técnica: Devido à ausência de IDs únicos nos seletores de variações, 
 
 </details>
 
----
 
-### Decisão Técnica: Comandos Customizados no Teste de Produtos
+
+#### Decisão Técnica: Comandos Customizados no Teste de Produtos
 
 #### Contexto
 Durante a implementação do comando customizado `addProdutos()`, foram identificadas inconsistências significativas na estrutura HTML do site de testes.
